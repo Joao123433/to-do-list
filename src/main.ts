@@ -23,18 +23,18 @@ function createLi() {
 }
 
 function removeLi(ev) {
-  const element = ev.target.parentNode
+  const element: HTMLElement = ev.target.parentNode
   element.classList.remove("animate__fadeInUpBig")
   element.classList.add("animate__zoomOut")
 
-  const key = ev.target.parentNode.childNodes[0].innerText
+  const key: string = ev.target.parentNode.childNodes[0].innerText
   localStorage.removeItem(key)
 
   setTimeout(() => element.remove() ,500)
 }
 
 function complete(ev: { target: any }) {
-  const element = ev.target
+  const element: HTMLElement = ev.target
   element.classList.toggle("complete")
 }
 
